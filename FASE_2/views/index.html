@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockets</title>
+
+    
+    <!--Estilos CSS propios de bootstrap (version 4.1.3)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Añado estilos css / -->
+    <style> 
+        /*Se coge la letra de google fonts */"
+        @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+        /*Aplico estilos*/
+        body {
+        font-family: "Questrial", sans-serif;  
+        }
+        #fondo {
+            background-image: url("https://i.pinimg.com/originals/01/d5/9e/01d59edc328728de22f87989495c1751.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #formulario, #idDivPrintInfo, #idpowerDiv{
+            background-color: white;
+            border-radius: 5px;
+        } 
+    </style>
+
+</head>
+<body id="fondo">
+    <div class="container my-3 pb-2" id = "formulario">
+        <h1 class="text-center">ROCKETS - FASE 1</h1>
+        <form id="idRocketForm"  name="nameRocketForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="rocketCode">Rocket code:</label>
+                    <input type="text"  class="form-control" id="idRocketCode" name = "nameRocketCode" placeholder="Enter the rocket code">
+                    <div class="invalid-feedback" id="errorRocketCode"></div>
+                </div>   
+                <div class="form-group col-md-6">
+                    <label for="thrusterNumber">Thruster number:</label>
+                    <input type="text"  class="form-control" id="idThrusterNumber" name = "nameThrusterNumber" placeholder="Enter the number of thusters">
+                    <div class="invalid-feedback" id="errorThrusterNumber"></div>
+                </div> 
+                    
+                <button type="button" id="btnCreateRocket" class="btn btn-dark" onclick="createRocket()">Create rocket</button> 
+                 
+            </div>
+        </form>  
+     
+
+        <form id="idPowerForm"  name="namePowerForm" class="pt-3 d-none">
+            <div class="form-row ">
+                <div class="form-group col-md-10">
+                    <label for="thrusterPower">Thruster power:</label>
+                    <input type="text"  class="form-control" id="idThrusterPower" name = "nameThrusterPower" placeholder="Enter the power of every thuster">
+                    <div class="invalid-feedback" id="errorThrusterPower"></div>
+                </div> 
+                <div class="form-group col-md-2  d-flex align-items-end">
+                    <button type="button" id="btnPower" class="btn btn-dark" onclick="createPower()">Add power</button>
+                </div> 
+            </div>
+        </form>
+        
+    </div>
+
+    <div class="container my-3 p-3 border border-dark d-none" id="idDivPrintInfo">
+    </div>  
+    
+</body>
+
+<script src="../models/rocket.js"></script>
+<script src="../models/thruster.js"></script>
+<script src="../controllers/controller.js"></script>
+
+<!--Scripts de bootstrap 4.1.3-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>
+
+
+
+ 
+
+    
